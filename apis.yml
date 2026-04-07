@@ -1,7 +1,12 @@
 aid: usaa
-url: https://raw.githubusercontent.com/api-evangelist/usaa/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/usaa/refs/heads/main/apis.yml
 modified: '2026-03-21'
 apis: []
 common:
   - type: Website
     url: https://www.usaa.com
+description: >-
+  USAA (United Services Automobile Association) is a financial services group offering
+  banking, investing, and insurance products to people and families that serve, or
+  served, in the United States military.
