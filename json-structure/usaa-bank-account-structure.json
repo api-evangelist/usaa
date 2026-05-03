@@ -1,0 +1,22 @@
+{
+  "name": "USAA Bank Account",
+  "description": "Structure of USAA account data accessible via open banking aggregators",
+  "fields": [
+    {"name": "accountId", "type": "string", "required": true, "description": "Unique account identifier from aggregator"},
+    {"name": "accountType", "type": "string", "required": true, "description": "checking, savings, credit, loan, investment, insurance"},
+    {"name": "accountSubtype", "type": "string", "required": false, "description": "More specific account type"},
+    {"name": "institutionName", "type": "string", "required": true, "description": "USAA Federal Savings Bank"},
+    {"name": "mask", "type": "string", "required": false, "description": "Last 4 digits of account number"},
+    {"name": "name", "type": "string", "required": false, "description": "Account display name"},
+    {"name": "balances", "type": "AccountBalances", "required": false, "description": "Balance information"},
+    {"name": "currency", "type": "string", "required": false, "description": "ISO 4217 currency code"}
+  ],
+  "nested": {
+    "AccountBalances": [
+      {"name": "available", "type": "number|null"},
+      {"name": "current", "type": "number|null"},
+      {"name": "limit", "type": "number|null"},
+      {"name": "currencyCode", "type": "string"}
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "fibo": "https://spec.edmcouncil.org/fibo/ontology/",
+    "fdx": "https://financialdataexchange.org/vocab/",
+
+    "BankAccount": "fibo:BankAccount",
+    "Transaction": "schema:ExchangeRateSpecification",
+
+    "accountId": {
+      "@id": "fdx:accountId",
+      "@type": "xsd:string"
+    },
+    "accountType": {
+      "@id": "fdx:accountType",
+      "@type": "xsd:string"
+    },
+    "institutionName": {
+      "@id": "schema:name",
+      "@type": "xsd:string"
+    },
+    "name": {
+      "@id": "schema:name",
+      "@type": "xsd:string"
+    },
+    "amount": {
+      "@id": "schema:price",
+      "@type": "xsd:decimal"
+    },
+    "date": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:date"
+    },
+    "merchantName": {
+      "@id": "schema:seller",
+      "@type": "xsd:string"
+    },
+    "category": {
+      "@id": "fdx:transactionCategory",
+      "@type": "xsd:string"
+    },
+    "pending": {
+      "@id": "fdx:transactionPending",
+      "@type": "xsd:boolean"
+    },
+    "balances": {
+      "@id": "fdx:balances",
+      "@type": "@id"
+    },
+    "available": {
+      "@id": "fdx:availableBalance",
+      "@type": "xsd:decimal"
+    },
+    "current": {
+      "@id": "fdx:currentBalance",
+      "@type": "xsd:decimal"
+    }
+  }
+}

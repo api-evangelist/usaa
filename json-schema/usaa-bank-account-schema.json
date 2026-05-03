@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/usaa/main/json-schema/usaa-bank-account-schema.json",
+  "title": "USAA Bank Account",
+  "description": "JSON Schema for USAA bank account data as accessible via open banking aggregators (Plaid, Mastercard Open Banking).",
+  "type": "object",
+  "properties": {
+    "accountId": {
+      "type": "string",
+      "description": "Aggregator-assigned account identifier"
+    },
+    "accountType": {
+      "type": "string",
+      "enum": ["checking", "savings", "credit", "loan", "investment", "insurance"],
+      "description": "Type of financial account"
+    },
+    "accountSubtype": {
+      "type": "string",
+      "description": "Account subtype (e.g., checking, savings, auto, homeowners)"
+    },
+    "institutionName": {
+      "type": "string",
+      "description": "Financial institution name",
+      "example": "USAA Federal Savings Bank"
+    },
+    "mask": {
+      "type": "string",
+      "description": "Last 4 digits of account number",
+      "example": "1234"
+    },
+    "name": {
+      "type": "string",
+      "description": "Account name as it appears at USAA"
+    },
+    "officialName": {
+      "type": ["string", "null"],
+      "description": "Official account name"
+    },
+    "balances": {
+      "$ref": "#/$defs/AccountBalances"
+    },
+    "currency": {
+      "type": "string",
+      "description": "ISO 4217 currency code",
+      "example": "USD"
+    }
+  },
+  "required": ["accountId", "accountType", "institutionName"],
+  "$defs": {
+    "AccountBalances": {
+      "type": "object",
+      "description": "Account balance information",
+      "properties": {
+        "available": {
+          "type": ["number", "null"],
+          "description": "Available balance (may differ from current for credit accounts)"
+        },
+        "current": {
+          "type": ["number", "null"],
+          "description": "Current ledger balance"
+        },
+        "limit": {
+          "type": ["number", "null"],
+          "description": "Credit limit (for credit accounts)"
+        },
+        "currencyCode": {
+          "type": "string",
+          "description": "ISO 4217 currency code"
+        }
+      }
+    }
+  }
+}

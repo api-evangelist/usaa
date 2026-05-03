@@ -1,0 +1,115 @@
+vocabulary:
+  name: USAA Financial Services Vocabulary
+  description: >-
+    Domain vocabulary for USAA financial services, covering banking, insurance,
+    military financial planning, and open banking connectivity concepts.
+  version: "1.0.0"
+  created: "2026-05-03"
+  domain: Financial Services
+
+terms:
+  - term: USAA
+    definition: >-
+      United Services Automobile Association — a Fortune 100 financial services
+      company providing banking, insurance, and investment products exclusively
+      to current and former US military members and their families.
+    type: Organization
+    tags: [Banking, Insurance, Military]
+
+  - term: Open Banking
+    definition: >-
+      A banking practice that provides third-party financial service providers
+      with open access to consumer banking, transactions, and other financial
+      data via APIs, with the customer's permission.
+    type: Concept
+    tags: [Banking, API, Fintech]
+
+  - term: Financial Data Exchange (FDX)
+    definition: >-
+      A non-profit industry standards body developing the FDX API standard for
+      secure consumer-permissioned financial data sharing in North America.
+      USAA is a founding member.
+    type: Standard
+    tags: [Banking, Standards, Open Banking]
+
+  - term: Account Aggregation
+    definition: >-
+      A service that allows consumers to view all their financial accounts
+      (checking, savings, investments, insurance) in one place through a
+      third-party app.
+    type: Service
+    tags: [Banking, Fintech]
+
+  - term: Plaid
+    definition: >-
+      A financial data network and API platform that provides connectivity to
+      USAA accounts for authorized fintech applications.
+    type: Platform
+    tags: [Banking, Fintech, Aggregator]
+
+  - term: Mastercard Open Banking
+    definition: >-
+      Formerly Flinks — a financial data aggregation and open banking platform
+      that supports USAA account connectivity.
+    type: Platform
+    tags: [Banking, Fintech, Aggregator]
+
+  - term: Consumer Permissioned Data
+    definition: >-
+      Financial data that a consumer explicitly authorizes to be shared with
+      third-party applications, typically through OAuth-based consent flows.
+    type: Concept
+    tags: [Banking, Privacy, Open Banking]
+
+  - term: FDX API
+    definition: >-
+      The Financial Data Exchange API standard defining how financial
+      institutions securely share account, transaction, and investment data
+      with authorized third parties.
+    type: Standard
+    tags: [Banking, Standards, Open Banking]
+
+  - term: Member
+    definition: >-
+      USAA's term for its customers — eligibility is restricted to active duty
+      military, veterans, and their family members.
+    type: Concept
+    tags: [USAA, Military]
+
+  - term: USAA Federal Savings Bank
+    definition: >-
+      The banking subsidiary of USAA that provides checking accounts, savings
+      accounts, credit cards, mortgage products, and other deposit products.
+    type: Organization
+    tags: [Banking, USAA]
+
+  - term: Homeowners Insurance
+    definition: >-
+      A USAA insurance product covering damage to a home and personal property,
+      and providing liability protection.
+    type: Product
+    tags: [Insurance, USAA]
+
+  - term: Auto Insurance
+    definition: >-
+      USAA's flagship insurance product providing vehicle coverage for military
+      members. USAA consistently ranks among the highest for customer satisfaction
+      in auto insurance.
+    type: Product
+    tags: [Insurance, USAA]
+
+  - term: OAuth 2.0
+    definition: >-
+      The authorization framework used by USAA and FDX-aligned connections to
+      allow members to securely authorize third-party applications to access their
+      financial data without sharing credentials.
+    type: Standard
+    tags: [Security, API, Standards]
+
+  - term: Tokenized Access
+    definition: >-
+      USAA's approach to data sharing that uses tokens (rather than member
+      credentials) to enable third-party applications to access account data,
+      improving security.
+    type: Technical
+    tags: [Security, API, Banking]

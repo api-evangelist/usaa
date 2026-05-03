@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/usaa/main/json-schema/usaa-transaction-schema.json",
+  "title": "USAA Transaction",
+  "description": "JSON Schema for USAA transaction data as accessible via open banking aggregators.",
+  "type": "object",
+  "properties": {
+    "transactionId": {
+      "type": "string",
+      "description": "Aggregator-assigned unique transaction identifier"
+    },
+    "accountId": {
+      "type": "string",
+      "description": "Account identifier the transaction belongs to"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Transaction amount. Negative = debit, positive = credit."
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the transaction occurred"
+    },
+    "postedDate": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "Date the transaction posted to the account"
+    },
+    "name": {
+      "type": "string",
+      "description": "Merchant or transaction name"
+    },
+    "merchantName": {
+      "type": ["string", "null"],
+      "description": "Cleaned merchant name"
+    },
+    "category": {
+      "type": ["string", "null"],
+      "description": "Transaction category (e.g., Travel, Dining, Insurance)"
+    },
+    "pending": {
+      "type": "boolean",
+      "description": "Whether the transaction is pending or posted"
+    },
+    "paymentChannel": {
+      "type": "string",
+      "enum": ["online", "in store", "other"],
+      "description": "Transaction payment channel"
+    },
+    "currencyCode": {
+      "type": "string",
+      "description": "ISO 4217 currency code",
+      "example": "USD"
+    }
+  },
+  "required": ["transactionId", "accountId", "amount", "date", "name"]
+}
