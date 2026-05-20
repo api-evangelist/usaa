@@ -1,5 +1,8 @@
 aid: usaa
 url: https://raw.githubusercontent.com/api-evangelist/usaa/refs/heads/main/apis.yml
+common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/usaa
 apis:
   - aid: usaa:open-banking-aggregation
     name: USAA Open Banking via Aggregators
