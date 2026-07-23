@@ -1,0 +1,35 @@
+generated: '2026-07-23'
+method: searched
+source: live probe of https://www.usaa.com/.well-known/
+host: https://www.usaa.com
+documents:
+- path: /.well-known/security.txt
+  status: 200
+  content_type: text/plain
+  file: usaa-security.txt
+  note: Real RFC 9116 disclosure policy, PGP-signed (SHA256). Points to Bugcrowd + disclosure@usaa.com.
+- path: /.well-known/openid-configuration
+  status: 200
+  content_type: text/html
+  file: null
+  note: Soft-200 SPA "System Error" HTML shell, not a real OIDC discovery document. USAA publishes no public OIDC metadata.
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  content_type: text/html
+  file: null
+  note: Soft-200 HTML shell, not an RFC 8414 metadata document.
+- path: /.well-known/oauth-protected-resource
+  status: 200
+  content_type: text/html
+  file: null
+  note: Soft-200 HTML shell, not an RFC 9728 metadata document.
+- path: /.well-known/api-catalog
+  status: 200
+  content_type: text/html
+  file: null
+  note: Soft-200 HTML shell, not an RFC 9727 api-catalog document.
+- path: /.well-known/ai-plugin.json
+  status: 200
+  content_type: text/html
+  file: null
+  note: Soft-200 HTML shell, not a real ai-plugin manifest.

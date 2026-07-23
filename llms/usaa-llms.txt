@@ -1,0 +1,33 @@
+# USAA
+
+> USAA (United Services Automobile Association) is a Fortune 100 financial services group offering banking, investing, and insurance products exclusively to the U.S. military community. USAA does not publish a first-party public developer portal or OpenAPI. Member financial data is reached only through consumer-permissioned open-banking aggregators — Plaid, Mastercard Open Banking (formerly Flinks), and BankSync — using OAuth 2.0 / FDX tokenized authorization. USAA is an FDX member and board participant.
+
+## Access model
+- No first-party public API, developer portal, or OpenAPI/Swagger definition.
+- Third-party access to member data is via aggregators, each with its own credentials and normalized data model.
+- Authorization is member-permissioned (OAuth 2.0 / FDX); shared credentials are not used.
+
+## Access paths
+- USAA on Plaid: https://plaid.com/institutions/usaa/
+- Mastercard Open Banking (US) docs: https://developer.mastercard.com/open-banking-us/documentation/
+- FDX Member Spotlight — USAA: https://www.financialdataexchange.org/FDX/FDX/News/Spotlights/Member%20Spotlight%20USAA.aspx
+
+## Company
+- Website: https://www.usaa.com
+- GitHub organization: https://github.com/usaa
+- GitHub Pages: https://usaa.github.io
+- LinkedIn: https://www.linkedin.com/company/usaa
+
+## Security
+- Vulnerability disclosure (RFC 9116 security.txt): https://www.usaa.com/.well-known/security.txt
+- Bug bounty (Bugcrowd): https://bugcrowd.com/usaa
+- Security contact: disclosure@usaa.com
+
+## Repository artifacts
+- Authentication profile: authentication/usaa-authentication.yml
+- Standards conformance (FDX / OAuth 2.0): conformance/usaa-conformance.yml
+- Well-known index: well-known/usaa-well-known.yml
+- Domain security: security/usaa-domain-security.yml
+- Vulnerability disclosure: security/usaa-vulnerability-disclosure.yml
+- Plans & pricing: plans/usaa-plans-pricing.yml
+- Vocabulary: vocabulary/usaa-vocabulary.yml

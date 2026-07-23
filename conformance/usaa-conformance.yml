@@ -1,0 +1,43 @@
+generated: '2026-07-23'
+method: searched
+source: https://www.financialdataexchange.org/FDX/FDX/News/Spotlights/Member%20Spotlight%20USAA.aspx
+note: >-
+  USAA does not publish a first-party OpenAPI. Conformance here reflects the
+  open-finance standards USAA aligns to as a Financial Data Exchange (FDX) member
+  and board participant, and the consumer-permissioned authorization pattern it
+  requires of third-party aggregators (Plaid, Mastercard Open Banking, BankSync).
+  Assertions are grounded in USAA's published FDX membership and open-banking
+  posture, not in a machine-readable contract.
+standards:
+- id: fdx-api
+  name: Financial Data Exchange (FDX) API
+  conforms: true
+  evidence: >-
+    USAA is an FDX member and board participant and aligns member data sharing to
+    the FDX API specification for secure open finance (FDX Member Spotlight).
+- id: oauth2
+  name: OAuth 2.0
+  conforms: true
+  evidence: >-
+    Third-party access uses OAuth 2.0 tokenized, scoped authorization; members
+    grant access without sharing USAA usernames or passwords.
+- id: no-shared-credentials
+  name: Tokenized (no screen-scraping / no shared credentials)
+  conforms: true
+  evidence: USAA data sharing is member-permissioned and token-based; shared-credential access is not used.
+- id: rfc9116-security-txt
+  name: RFC 9116 security.txt
+  conforms: true
+  evidence: PGP-signed /.well-known/security.txt published with Contact, Policy, Encryption, Expires.
+- id: fapi
+  name: Financial-grade API (FAPI)
+  conforms: false
+  evidence: No published evidence of FAPI profile conformance on a first-party surface.
+- id: rfc8414-oauth-metadata
+  name: RFC 8414 OAuth Authorization Server Metadata
+  conforms: false
+  evidence: /.well-known/oauth-authorization-server returns an HTML shell, not a metadata document.
+- id: openid-connect
+  name: OpenID Connect Discovery
+  conforms: false
+  evidence: /.well-known/openid-configuration returns an HTML shell, not OIDC metadata.

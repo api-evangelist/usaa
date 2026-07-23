@@ -1,0 +1,31 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+# USAA Secure Vulnerability Disclosure 
+Contact: https://bugcrowd.com/engagements/usaa
+Contact: mailto:disclosure@usaa.com
+Encryption: https://www.usaa.com/gpg_disclosure_public.txt
+Expires: 2026-12-31
+Acknowledgments: https://bugcrowd.com/engagements/usaa/hall_of_fames
+Preferred-Languages: en
+Canonical: https://www.usaa.com/.well-known/security.txt
+Policy: https://bugcrowd.com/usaa
+Hiring: https://www.usaajobs.com/search-jobs/information%20security/
+
+TANKS FOR ALL THE VULNS!
+
+░░░░░░███████ ]▄▄▄▄▄▄▄▄
+ ▂▄▅█████████▅▄▃▂
+[███████████████████].
+◥⊙▲⊙▲⊙▲⊙▲⊙▲⊙▲⊙◤..
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCAAdFiEEKtZ6jIBkZf1ejGQI1mts17WbKlUFAmlT9P8ACgkQ1mts17Wb
+KlU4RQf/frhN82zsoQLviYupL3tPPj99+nMPePoigI0lnmx+qeSXeadcN/N1N/TY
+rDNiLk89UZ8i7tOjMnaBv2I7NIOIHbeXEiXqSYkTAIoxbA0ibctD9l1PN7zyQnEc
+rbd+o+9lG4hNXtKLi3h3EHFvoAbjGdmugN9Be3EDHdq+78dHs/Fp028zRbxxqaGd
+P9BnHiHUctZhYJo5A8ncUeLLM8NyKlnKtbZhWSO63bpERUch5bCOP8Fi44c7xotg
+GUNEGF049O/QT3vB1oEOxzk2EINdC0vH+2gbWfXNRiUdfe876OuIsdmVFI4KTlf1
+IQEOgvoEhRIVzkFjpZX3U2JKeGG1nQ==
+=SyNq
+-----END PGP SIGNATURE-----

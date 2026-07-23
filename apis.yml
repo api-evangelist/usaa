@@ -112,8 +112,20 @@ common:
   url: finops/usaa-finops.yml
 - type: VulnerabilityDisclosure
   url: security/usaa-vulnerability-disclosure.yml
+- type: Security
+  url: https://www.usaa.com/.well-known/security.txt
 - type: DomainSecurity
   url: security/usaa-domain-security.yml
+- type: WellKnown
+  url: well-known/usaa-well-known.yml
+- type: SecurityTxt
+  url: well-known/usaa-security.txt
+- type: Authentication
+  url: authentication/usaa-authentication.yml
+- type: Conformance
+  url: conformance/usaa-conformance.yml
+- type: LLMsTxt
+  url: llms/usaa-llms.txt
 access: 3rd-Party
 position: Consuming
 features:

@@ -1,0 +1,34 @@
+generated: '2026-07-23'
+method: searched
+source: https://plaid.com/institutions/usaa/
+docs: https://www.financialdataexchange.org/FDX/FDX/News/Spotlights/Member%20Spotlight%20USAA.aspx
+note: >-
+  USAA publishes no first-party OpenAPI, so this profile is captured from
+  documented open-banking behavior rather than derived from a spec. Member
+  financial data is reached only through consumer-permissioned aggregators
+  (Plaid, Mastercard Open Banking, BankSync); each aggregator holds its own
+  developer credentials, and the member-facing authorization to USAA follows the
+  OAuth 2.0 / FDX tokenized pattern (no shared USAA username/password).
+summary:
+  types: [oauth2]
+  api_key_in: []
+  oauth2_flows: [authorizationCode]
+  first_party_developer_credentials: false
+  consumer_permissioned: true
+schemes:
+- name: MemberPermissionedOAuth
+  type: oauth2
+  scheme: authorizationCode
+  description: >-
+    Members grant scoped, tokenized access to an authorized third party via an
+    OAuth 2.0 authorization flow; the third party receives a token, never USAA
+    credentials. Aligned to the FDX API authorization model.
+  sources: [docs]
+- name: AggregatorApiKey
+  type: apiKey
+  scheme: aggregator-managed
+  description: >-
+    The developer-facing credential is issued and managed by the chosen
+    aggregator (Plaid client_id/secret, Mastercard Open Banking, BankSync), not
+    by USAA. USAA exposes no direct developer API key.
+  sources: [docs]
