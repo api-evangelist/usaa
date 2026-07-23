@@ -1,0 +1,71 @@
+reviewer: API Evangelist
+date: '2026-07-23'
+slug: usaa
+institution: USAA
+tier: super-regional
+summary: >-
+  USAA (United Services Automobile Association) is a Fortune 100 military-focused
+  banking and insurance provider that operates an aggregator-only public API
+  posture. There is no first-party public developer surface: developer.usaa.com
+  does not resolve (DNS ENOTFOUND) and no "APIs"/"Developers" catalog is
+  published on usaa.com. Third-party access to member financial data is delivered
+  exclusively through consumer-permissioned open-banking aggregators. This is an
+  honest, faithful representation of a limited, voluntary US open-finance surface
+  rather than a padded catalog.
+developer_portal: none
+developer_portal_url: ''
+downloadable_specs: false
+specs_harvested: 0
+spec_provenance: >-
+  No OpenAPI, Swagger, or Postman collections are published by USAA. The data
+  contract is defined and governed by each aggregator (Plaid, Mastercard Open
+  Banking, BankSync) and by the FDX API specification. No specs were harvested
+  because none exist as first-party USAA artifacts; fabricating one would
+  misrepresent the surface.
+auth_model:
+  scheme: OAuth 2.0
+  detail: >-
+    Consumer-permissioned, tokenized authorization following the FDX / OAuth 2.0
+    pattern. Members grant scoped access to authorized third parties without
+    sharing USAA usernames or passwords. Actual token issuance and consent flows
+    are mediated by the aggregators.
+fdx_1033_aggregator_posture:
+  fdx_member: true
+  fdx_board_participant: true
+  fdx_evidence: >-
+    USAA is an active FDX member and board participant, featured in an FDX Member
+    Spotlight (Jean-Paul LaClair and Jason Paul Hendry) discussing its
+    open-finance architecture and role in shaping FDX standards.
+  cfpb_1033: >-
+    USAA's data-access approach aligns with the CFPB 1033 open-banking direction
+    (consumer-permissioned API access, no screen scraping / credential sharing),
+    delivered through FDX-aligned aggregator connections.
+  aggregators:
+  - name: Plaid
+    evidence: USAA is a Plaid-supported institution (plaid.com/institutions/usaa).
+  - name: Mastercard Open Banking (formerly Flinks)
+    evidence: Documented aggregator connectivity to USAA accounts.
+  - name: BankSync
+    evidence: Listed as an aggregator with USAA connectivity (Open Banking Tracker).
+  first_party_api: false
+data_available:
+- Account metadata
+- Current and available balances
+- Transaction history
+- Account holder information (with consent)
+open_source:
+  github_org: https://github.com/usaa
+  public_repos: 8
+  note: >-
+    Public repos are internal developer/security tooling (sonar-quality-gates,
+    indexa, vogel, Assemblyline v4 integrations) — not product APIs and not
+    exposing member data.
+findings:
+- No first-party developer portal (developer.usaa.com does not resolve; no API
+  catalog on usaa.com).
+- No downloadable OpenAPI/Swagger/Postman; contract is aggregator- and
+  FDX-defined.
+- Access is aggregator-only and consumer-permissioned via OAuth 2.0.
+- Active FDX member and board participant; posture aligns with CFPB 1033.
+- Public GitHub org exists but contains open-source tooling, not product APIs.
+status: aggregator-only
