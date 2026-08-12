@@ -13,6 +13,17 @@ description: >-
   tokenized authorization rather than shared credentials. USAA is an active
   member and board participant of the Financial Data Exchange (FDX) and helps
   shape the FDX API standard for secure open finance data sharing in the US.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-11'
+  method: derived
 accessModel:
   pricing: enterprise
   onboarding: unknown
