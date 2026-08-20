@@ -38,6 +38,16 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/usaa.png
 tags:
+  - Financial-Services
+  - Banking
+  - Insurance
+  - Military Finance
+  - Open Banking
+  - Open Finance
+  - Financial Data Exchange
+  - United States
+  - Fortune 100
+tags_raw:
   - Financial Services
   - Banking
   - Insurance
