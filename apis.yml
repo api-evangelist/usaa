@@ -38,7 +38,7 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/usaa.png
 tags:
-  - Financial-Services
+  - Financial Services
   - Banking
   - Insurance
   - Military Finance
@@ -57,6 +57,7 @@ tags_raw:
   - Financial Data Exchange
   - United States
   - Fortune 100
+  - Financial-Services
 created: '2024-12-03'
 modified: '2026-07-25'
 apis: []
