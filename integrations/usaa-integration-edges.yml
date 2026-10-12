@@ -1,16 +1,29 @@
 generated: '2026-10-12'
-method: none
+method: searched
 source:
 - https://zapier.com/apps/usaa/integrations
 - https://n8n.io/integrations/usaa/
 - https://composio.dev/toolkits/usaa
 - https://monid.ai/tools/usaa
 checked:
+- https://app.usecanopy.com/api/v1.0.0/carriers
 - https://composio.dev/toolkits/usaa
 - https://monid.ai/tools/usaa
 - https://n8n.io/integrations/usaa/
 - https://zapier.com/apps/usaa/integrations
 summary: null
 marketplace_apps: []
-edges: []
+edges:
+- partner_name: canopy
+  partner: canopy
+  partner_match: domain
+  type: coverage
+  channel: partner-built
+  relationship: carrier-coverage
+  direction: partner-built
+  evidence: https://app.usecanopy.com/api/v1.0.0/carriers
+  category: insurance-carrier
+  covered_as: usaa
+  detected_by: sweep-insurance.py
+  detected: '2026-10-13'
 templates: []
