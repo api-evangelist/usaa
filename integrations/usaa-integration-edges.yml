@@ -10,6 +10,7 @@ checked:
 - https://composio.dev/toolkits/usaa
 - https://monid.ai/tools/usaa
 - https://n8n.io/integrations/usaa/
+- https://registry.financialdataexchange.org/
 - https://zapier.com/apps/usaa/integrations
 summary: null
 marketplace_apps: []
@@ -26,4 +27,29 @@ edges:
   covered_as: usaa
   detected_by: sweep-insurance.py
   detected: '2026-10-13'
+- partner_name: FDX (Financial Data Exchange)
+  partner: fdx
+  type: contract
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://registry.financialdataexchange.org/
+  contract_reference:
+    register: FDX Registry
+    standard: FDX API
+    spec_file: null
+    register_api: https://registry.financialdataexchange.org/fdxregistryapi/organizations/search/listingTags
+    role: data-provider
+    member_type: MEMBER
+    registered_name: USAA
+    register_id: 131
+    registered_website: https://www.usaa.com
+    country: United States
+    fdx_version:
+    - '3.0'
+    matched_by: domain:usaa.com
+    detected_by: sweep-fdx.py
+    detected: '2026-10-14'
+  detected_by: sweep-fdx.py
+  first_seen: '2026-10-14'
 templates: []
