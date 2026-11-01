@@ -64,88 +64,133 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-USAA (United Services Automobile Association) is a Fortune 100 financial services group offering banking, investing, and insurance products to people and families that serve, or served, in the United States military. USAA is an active member of the Financial Data Exchange (FDX) and provides open banking data access through API aggregators.
+USAA (United Services Automobile Association) is a Fortune 100 financial services group offering banking, investing, and insurance products exclusively to people and families who serve, or have served, in the United States military. USAA does not publish a first-party public developer portal or downloadable API specifications. Third-party access to member financial data is delivered through consumer-permissioned open-banking aggregators — Plaid, Mastercard Open Banking (formerly Flinks), and BankSync — using OAuth 2.0 tokenized authorization rather than shared credentials. USAA is an active member and board participant of the Financial Data Exchange (FDX) and helps shape the FDX API standard for secure open finance data sharing in the US.
 
-**Website:** https://www.usaa.com  
-**GitHub:** https://github.com/usaa  
-**APIs.yml:** https://raw.githubusercontent.com/api-evangelist/usaa/refs/heads/main/apis.yml
+**Areas:** Financial Services · Banking · Insurance · Military Finance · Open Banking · Open Finance · Financial Data Exchange · United States · Fortune 100
 
----
+## USAA on APIs.io
 
-## Scope
+Everything profiled for USAA is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/usaa/](https://apis.io/providers/usaa/)** — or go straight to one of the APIs or properties below.
 
-- **Type:** Contract
-- **Position:** Consuming
-- **Access:** 3rd-Party
+### Published properties
 
-## Tags
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Financial Services, Banking, Insurance, Military Finance, Open Banking, Fortune 100
+#### JSON Schema (2)
 
-## Timestamps
+The data models the API reads and writes.
 
-- **Created:** 2026-03-21
-- **Modified:** 2026-05-03
+- [USAA Bank Account](https://apis.io/schemas/usaa/usaa-bank-account/)
+- [USAA Transaction](https://apis.io/schemas/usaa/usaa-transaction/)
 
----
+#### JSON Structure (1)
 
-## APIs
+Data models expressed in JSON Structure.
 
-### Open Banking via Aggregators
-USAA does not maintain a public developer portal, but supports member-permissioned data sharing through:
+- [Usaa Bank Account Structure](https://apis.io/json-structure/usaa/usaa-bank-account-structure/)
 
-- **Plaid** — Account, balance, and transaction data for USAA members
-- **Mastercard Open Banking (formerly Flinks)** — Account aggregation connectivity
+#### JSON-LD (1)
 
-USAA participates in the **Financial Data Exchange (FDX)** standard for secure open banking data sharing.
+Linked-data contexts for the provider's vocabulary.
 
-- **FDX Member Spotlight:** https://www.financialdataexchange.org/FDX/FDX/News/Spotlights/Member%20Spotlight%20USAA.aspx
+- [Us Usaa Context](https://apis.io/jsonld/usaa/us-usaa-context/)
 
-### Open Source GitHub Projects
-- [sonar-quality-gates](https://github.com/usaa/sonar-quality-gates) — Gradle plugin for Sonar quality gates
-- [indexa](https://github.com/usaa/indexa) — Java dependency artifact analyzer
-- [vogel](https://github.com/usaa/vogel) — Actuarial ML workflow tool
-- [assemblyline-service-synapse](https://github.com/usaa/assemblyline-service-synapse) — Cyber threat intelligence integration
+#### Vocabulary (1)
 
----
+The provider's domain terms, defined.
 
-## Artifacts
+- [USAA Financial Services Vocabulary](https://apis.io/vocabularies/usaa/usaa-vocabulary/)
 
-| Type | Files |
-|------|-------|
-| JSON Schema | [json-schema/](json-schema/) — 2 schemas |
-| JSON Structure | [json-structure/](json-structure/) — 1 structure |
-| JSON-LD | [json-ld/](json-ld/) — 1 context |
-| Vocabulary | [vocabulary/](vocabulary/) — 1 vocabulary |
+#### Governance rules (1)
 
----
+Spectral rulesets for the provider's contracts.
 
-## Open Banking Connectivity
+- [USAA — jsonschema rules](https://apis.io/rules/usaa/usaa-jsonschema-spectral-rules/)
 
-USAA accounts are accessible through these aggregators for authorized third-party applications:
+#### Security (3)
 
-| Aggregator | Coverage |
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Usaa Authentication](https://apis.io/security/usaa/usaa-authentication/)
+- [Usaa Domain Security](https://apis.io/security/usaa/usaa-domain-security/)
+- [Usaa Vulnerability Disclosure](https://apis.io/security/usaa/usaa-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Usaa Plans Pricing](https://apis.io/plans/usaa/usaa-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Usaa Rate Limits](https://apis.io/rate-limits/usaa/usaa-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Usaa Finops](https://apis.io/finops/usaa/usaa-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.usaa.com)
+- [Documentation](https://www.financialdataexchange.org/FDX/FDX/News/Spotlights/Member%20Spotlight%20USAA.aspx)
+- [Security](https://www.usaa.com/.well-known/security.txt)
+- [GitHub](https://github.com/usaa)
+
+## API Evangelist rating
+
+**Kin Score 17.1** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
 |---|---|
-| Plaid | Checking, savings, credit, investment accounts |
-| Mastercard Open Banking | Checking, savings, credit accounts |
+| Discoverability | 55.4 |
+| Contract quality | 10.7 |
+| Contract governance | 28.0 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 5.3 |
 
-Data available through aggregators:
-- Account balances (available and current)
-- Transaction history
-- Account metadata
+**Agent readiness 3.1** — human-only
 
----
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-## Use Cases
+**Regulatory alignment 18.1** — Banking & Open Finance
 
-- **Personal Finance Management** — Integrate USAA accounts in budgeting apps
-- **Account Aggregation** — View USAA accounts alongside other financial institutions
-- **Military Family Financial Planning** — Leverage USAA's specialized military financial products
-- **Open Banking Integration** — Access USAA data via FDX-aligned standards
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/usaa/](https://apis.io/providers/usaa/).
 
----
+## How this profile is made
 
-## Maintainers
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-**FN:** Kin Lane  
-**Email:** kin@apievangelist.com
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for USAA: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/usaa/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
