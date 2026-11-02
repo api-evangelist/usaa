@@ -1,0 +1,58 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: USAA
+providerId: usaa
+created: '2026-05-04'
+# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
+# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
+method: generated
+modified: '2026-05-05'
+reconciled: false
+tags:
+  - Financial Services
+  - Banking
+  - Insurance
+  - Military Finance
+description: USAA is a member-only financial services provider (banking, insurance, investments) for the U.S. military community. There is no public developer portal or commercial API pricing. Member-side integrations are surfaced only via the USAA mobile/web experience and partner aggregator data-sharing agreements (e.g. via FDX-style consumer-permissioned data flows).
+sources:
+  - https://www.usaa.com/
+notes: No public API pricing or developer portal located. Any data-sharing or integration access (account aggregation, mortgage, insurance) is provisioned through partner data-aggregator contracts under USAA's membership terms.
+plans:
+  - id: usaa-contact-sales
+    name: Contact Sales / Partner Onboarding
+    type: enterprise
+    description: API access is provisioned only to contracted aggregator and integration partners under data-sharing agreements; not available as a self-serve commercial plan.
+    entries:
+      - label: Partner-Contracted Access
+        name: contracted_access
+        type: flat
+        metric: varies
+        limit: -1
+        timeFrame: usage
+        geo: US
+        unit: 1
+        price: contact sales
+        userMultiplied: false
+    elements:
+      - name: USAA Membership (Member Side)
+      - name: Aggregator / FDX Partner Onboarding (Partner Side)
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - subscription
+  units:
+  - negotiated
+  plans:
+  - name: Contact Sales / Partner Onboarding
+    access: enterprise
+    model: subscription
+    model_how: derived
+    units:
+    - negotiated
+    periods:
+    - per-use
